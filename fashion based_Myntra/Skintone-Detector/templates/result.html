@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skin Tone Detector Result</title>
+</head>
+<body>
+    <h1>Skin Tone Detector Result</h1>
+    <h2>Dominant Colors</h2>
+    <p>Red Component: {{ colors[0] }}</p>
+    <p>Green Component: {{ colors[1] }}</p>
+    <p>Blue Component: {{ colors[2] }}</p>
+    <h2>Skin Tone Type</h2>
+    <p>{{ tone }}</p>
+    <a href="{{ url_for('home') }}">Go Back</a>
+</body>
+</html>

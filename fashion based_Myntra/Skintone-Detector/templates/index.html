@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Tone Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="{{ url_for('static', filename='image/myntra-removebg-preview.png') }}" alt="Logo">
+        </div>
+        <nav id="nav_bar">
+            
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+        </nav>
+        <div id="search">
+            <i id="search_icon" class="fas fa-search"></i>
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more">
+        </div>
+        <div id="right_icon">
+            <div>
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+            <div>
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+            </div>
+            <div>
+                <i class="fas fa-shopping-bag"></i>
+                <span>Bag</span>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="content-wrapper" >
+            <div class="content">
+                <h1 style="font-size: 30px; margin-bottom: 10px; color: white">What Color Looks Best on Me?</h1>
+                <p class="cont" style="color: white;">It's all about your skin's undertones.</p>
+                <img id="first"  src="{{ url_for('static', filename='image/360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg') }}">
+                <div style="background-color: rgb(155, 137, 155); border-radius: 10px; padding: 20px;">
+                    <p class="cont"style="color: white;">Incorporating more color into your wardrobe might seem overwhelming and nearly impossible at first, but the truth is it's pretty easy. Of course, there are no "rules" to fashion — you can wear whatever colors you'd like, and we bet you'll look darn good in them, too. That being said, identifying which colors best flatter your specific skin tone can help you stand out in a crowd and radiate from the inside out.</p>
+                    <p class="cont"style="color: white;">Color is the number one most important thing to me when it comes to styling; it's what makes my service unique," stylist Cristina Ehrlich—who works with Laura Dern, Rachel Brosnahan, Uzo Aduba, and Natasha Lyonne—told InStyle. "The first thing I do with a new client is study their skin tone and figure out what's going to look best. It's easy to wear black, but color can be so beautiful."</p>
+                    <p class="cont"style="color: white;">Just like with makeup and hair, the key to finding your most flattering colors starts with skin tone, or rather, skin undertone, which can be grouped into three categories: warm, cool, and neutral.
+                    </p>
+                </div>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">You're Warm If...</h1>
+                <img id="first" src="{{ url_for('static', filename='image/0b83e99dbaadc7f7b0a1a2fad4f0e143.jpg') }}" width="auto" height="12%">
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Skin Tone</h1>
+                <p class="cont">Has a greenish or yellowish (aka golden) undertone. Olive complexions also fall into the warm category, says Eiseman.</p>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Hair Color</h1>
+                <p class="cont">Ranges from dark brown to dark blonde.</p>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Jewelry Preference</h1>
+                <p class="cont">According to fashion stylist Britt Theodora, the type of jewelry you instinctively gravitate towards might be telling of your skin's tone. If you feel yellow gold looks best on your skin, you probably have a warmer skin tone, she says.</p>
+                <br>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Colors for Warmer Skin Tones</h1>
+                <p class="cont">LA-based fashion and celebrity stylist Philippe Uter tells InStyle that he associates warm skin tones with warm colors, like orange, yellow, or even gold.</p>
+                <div style="background-color: black;padding: 20px; border-radius: 20px;">
+                    <h1 style="color: white;">TIP....</h1>
+                    <p class="cont" style="color: white;">He adds that bright colors also make the perfect match, while Theodora says that natural earth tones such as browns, deep tonal reds, and rich shades of green look great as well.</p>
+                </div>
+                <br>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Colors you should avoid</h1>
+                <p class="cont">there aren't really any colors warmer skin tones should avoid. That being said, it is suggested only wearing black if it's a "slick and graphic piece."</p>
+                <br><br><br>
+                <!-- cooollll -->
+                <h1 style="font-size: 30px; margin-bottom: 10px;">You're Cool If...</h1>
+                <img id="first" src="{{ url_for('static', filename='image/color-and-skin-tone-indian-men.jpg') }}" width="800px" height="9%">
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Skin Tone</h1>
+                <p class="cont">Has a bluish undertone. This group can also range from very fair to very dark.</p>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Hair Color</h1>
+                <p class="cont">Ranges from very dark (blue-black or a deep brown) to light blonde</p>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Jewelry Preference</h1>
+                <p class="cont">According to Theodora, those in the cool group tend to prefer silver, rose gold, or a mix of both.</p>
+                <br>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Colors for Cooler Skin Tones</h1>
+                <p class="cont">Cooler tones look fantastic in charcoal, cool blues, and violet, says Theodora. However, Uter adds that you might want to keep in mind that strong colors can make cool skin tones look paler. "I usually love pastel colors to bring some softness to the silhouette," he tells us—and also recommends adding blues and pinks, soft yellow, or green to your wardrobe.</p>
+                <br>
+                <br>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Colors you should avoid</h1>
+                <p class="cont">Uter's biggest no-no when it comes to dressing cooler skin tones are too bold, strong colors, such as electric blue or grassy green. Eiseman warns against wearing oranges and yellows.</p>
+
+
+
+                <!-- neutral -->
+                <h1 style="font-size: 30px; margin-bottom: 10px;">You're Neutral If...</h1>
+                <img id="first" src="{{ url_for('static', filename='image/olive-complexion.jpg') }}" width="800px" height="9%">
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Skin Tone</h1>
+                <p class="cont">Is hard to determine if you have a neutral skin tone, you really can't tell if you're warm or cool.</p>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Hair Color</h1>
+                <p class="cont">Is a combination of colors. Think blonde with ashy streaks or brown with warmer tones.</p>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Your Jewelry Preference</h1>
+                <p class="cont">Is a mix and match of metals.</p>
+                <br>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Colors for Cooler Skin Tones</h1>
+                <p class="cont">According to Theodora, neutral tones look great in neutral colors, so stick with shades that fall in the middle of the color spectrum. Still, if your goal is adding more pizzazz to your wardrobe than white, beige, and taupe can offer, Eiseman suggests gravitating towards shades of light peach, dusty pinks, soft rose, peony pink, placid blue, jade green, and cameo green.</p>
+                <br>
+                <br>
+                <h1 style="font-size: 30px; margin-bottom: 10px;">Colors you should avoid</h1>
+                <p class="cont">Reds, yellows, and anything too bright or vibrant that can overwhelm are typically a no-go for neutral skin tones. If you do decide to wear yellow, try a soft version like cornsilk or buff.</p>
+            </div>
+            <div class="skin-tone-detector-box">
+                <div class="skin-tone-detector">
+                    <h1 style="font-size: 40px;">Skin Tone Detector</h2>
+                        <form action="{{ url_for('process_image') }}" method="post" enctype="multipart/form-data">
+                            <label for="image">Upload an image:</label>
+                            <input type="file" name="image" accept="image/*" required>
+                            <button type="submit">Process Image</button>
+                        </form>
+
+                     <!-- Display Results -->
+            {% if colors and skin_tone %}
+            <div class="result-container">
+                <h1>Skin Tone Detector Result</h1>
+                <h2>Dominant Colors</h2>
+                <p>Red Component: {{ colors[0] }}</p>
+                <p>Green Component: {{ colors[1] }}</p>
+                <p>Blue Component: {{ colors[2] }}</p>
+                <h2>Skin Tone Type</h2>
+                <p>{{tone }}</p>
+            </div>
+            {% endif %}
+                    <!-- <p>Or</p>
+                    <button id="captureButton">Capture from Camera</button>
+                    <video id="videoElement" style="display: none;"></video>
+                    <canvas id="canvasElement" style="display: none;"></canvas>
+                    <div class="result" id="resultBox">
+                        {% if result %}
+                            <p>{{ result }}</p>
+                        {% endif %}
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <!-- camera se capture krne ka but chal nahi rha noraml main.py se chalao to working fine -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('videoElement');
+            const canvas = document.getElementById('canvasElement');
+            const captureButton = document.getElementById('captureButton');
+
+            // Function to start video stream from camera
+            function startCamera() {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function (stream) {
+                        video.srcObject = stream;
+                        video.play();
+                    })
+                    .catch(function (error) {
+                        console.error('Error accessing camera: ', error);
+                    });
+            }
+
+            // Event listener for capture button
+            captureButton.addEventListener('click', function () {
+                startCamera();
+                video.style.display = 'block';
+                canvas.style.display = 'none';
+            });
+
+            // Function to take snapshot from camera
+            function takeSnapshot() {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                return canvas.toDataURL('image/png');
+            }
+
+            // Submit form with captured image
+            const form = document.getElementById('skinToneForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                if (video.style.display === 'block') {
+                    const capturedImage = takeSnapshot();
+                    formData.set('image', capturedImage);
+                }
+                fetch('/process_image', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const resultBox = document.getElementById('resultBox');
+                    resultBox.innerHTML = '<p>' + data.result + '</p>';
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+</body>
+</html>

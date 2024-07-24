@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --primaryFont: 'DM Sans', sans-serif;
+    --charSpace: 6px;
+    --primaryColor: #3e4152;
+    --secondaryColor: #fafbfc;
+}
+
+body {
+    font-family: var(--primaryFont);
+    scroll-behavior: smooth;
+    background-image: url('../image/flowing-paint-wallpaper-preview.jpg');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+body img {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu bar */
+header {
+    width: 100%;
+    height: 110px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 1000;
+}
+
+header > * {
+    height: 100%;
+}
+
+#logo {
+    width: 12%;
+}
+
+#logo > img {
+    width: 80%;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+#nav_bar {
+    width: 36%;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    color: #282c3f;
+    font-family: var(--primaryFont);
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#nav_bar a {
+    text-decoration: none;
+    color: unset;
+    display: block;
+    height: 100%;
+    padding-top: 4.5rem;
+}
+
+#nav_bar li:hover a {
+    border-bottom: 5px solid #f58fa0;
+}
+
+#nav_bar li:nth-child(1):hover a {
+    border-bottom: 5px solid #ff4500;
+}
+
+#nav_bar li:nth-child(2):hover a {
+    border-bottom: 5px solid #ff69b4;
+}
+
+#nav_bar li:nth-child(3):hover a {
+    border-bottom: 5px solid #ffa500;
+}
+
+#nav_bar li:nth-child(4):hover a {
+    border-bottom: 5px solid #f2c210;
+}
+
+#nav_bar li:nth-child(5):hover a {
+    border-bottom: 5px solid #0db7af;
+}
+
+#nav_bar li {
+    height: 100%;
+}
+
+#nav_bar #studio {
+    position: relative;
+}
+
+#nav_bar span {
+    color: red;
+    position: absolute;
+    top: 30%;
+    left: 105%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#search {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #696e79;
+    position: relative;
+}
+
+#search > #search_bar {
+    display: inline-block;
+    width: 95%;
+    height: 45px;
+    line-height: 24px;
+    padding: 1.7rem;
+    padding-left: 7rem;
+    background-color: #f5f5f6;
+    border: none;
+    border-radius: 0.6rem;
+    color: #696e79;
+    letter-spacing: 0.5px;
+}
+
+#search > #search_bar:focus {
+    outline: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+#search #search_icon {
+    position: absolute;
+    left: 4rem;
+}
+
+#right_icon {
+    width: 14%;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#right_icon > div {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px
+}
+
+#right_icon i {
+    font-size: 2rem;
+}
+
+
+/* PROFILE DROPDOWN MENU */
+#reggDropdown {
+    position: relative;
+}
+
+#reggDropdown > #drop {
+    width: 20rem;
+    height: 0;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-radius: 1.5rem;
+    cursor: default;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 500ms;
+}
+
+#reggDropdown a {
+    width: 85%;
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    padding: 20px;
+}
+
+.content {
+    width: 60%;
+}
+
+.skin-tone-detector-box {
+    width: 35%;
+    height: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    /* background-size: contain; */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cont{
+    font-size: large;
+    margin-bottom: 10px;
+}
+#first{
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
