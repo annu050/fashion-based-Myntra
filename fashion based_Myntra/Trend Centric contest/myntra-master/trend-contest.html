@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Feed with Pop-up</title>
+  
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="slider">
+        <img id="img-1" src="img-1.jpg" alt="Image 1"/>
+        <img id="img-2" src="img-2.jpg" alt="Image 2"/>
+        <img id="img-3" src="img-3.jpg" alt="Image 3"/>
+      </div>
+      <div class="navigation-button">
+        <span class="dot active" onclick="changeSlide(0)"></span>
+        <span class="dot" onclick="changeSlide(1)"></span>
+        <span class="dot" onclick="changeSlide(2)"></span>
+      </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="column">
+                <img src="https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Description 1" />
+                <img src="https://images.pexels.com/photos/2419375/pexels-photo-2419375.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 2" />
+                <img src="https://images.pexels.com/photos/2326290/pexels-photo-2326290.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 3" />
+                <img src="https://images.pexels.com/photos/3251006/pexels-photo-3251006.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 4" />
+                <img src="https://images.pexels.com/photos/1980720/pexels-photo-1980720.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 5" />
+            </div>
+            <div class="column">
+                <img src="https://images.pexels.com/photos/3546429/pexels-photo-3546429.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 6">
+                <img src="https://images.pexels.com/photos/3889868/pexels-photo-3889868.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 7">
+                <img src="https://images.pexels.com/photos/2091160/pexels-photo-2091160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Description 8">
+                <img src="https://images.pexels.com/photos/2019546/pexels-photo-2019546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Description 9">
+                <img src="Images/2165966.webp" alt="Description 10">
+                <img src="Images/2165966.webp" alt="Description 11">
+            </div>
+            <div class="column">
+                <img src="https://images.pexels.com/photos/3889868/pexels-photo-3889868.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 12" />
+                <img src="https://images.pexels.com/photos/2360569/pexels-photo-2360569.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 13" />
+                <img src="https://images.pexels.com/photos/3779785/pexels-photo-3779785.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 14">
+                <img src="https://images.pexels.com/photos/259987/pexels-photo-259987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 15">
+                <img src="https://images.pexels.com/photos/2350514/pexels-photo-2350514.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Description 16">
+                <img src="Images/2165966.webp" alt="Description 17">
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="img01">
+            <div class="modal-description">
+                <h2 id="caption"></h2>
+                <p id="description-text">This is a placeholder description. You can add any relevant information about the image here.</p>
+                <button id="upvote-btn">Upvote</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var descriptionText = document.getElementById("description-text");
+
+        var images = document.querySelectorAll('.column img');
+        images.forEach(function(img) {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                descriptionText.innerText = "This is a description for " + this.alt;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // Handle the upvote button click
+        document.getElementById("upvote-btn").onclick = function() {
+            alert("Upvoted!");
+        }
+    </script>
+</body>
+</html>
